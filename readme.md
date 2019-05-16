@@ -15,6 +15,18 @@ yarn init
 
 ```
 
+To start the api in dev
+
+```
+yarn dev
+```
+
+To start the api in production
+
+```
+yarn start
+```
+
 To test the api
 
 ```
