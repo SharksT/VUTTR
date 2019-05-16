@@ -2,9 +2,9 @@ FORMAT: 1A
 
 #VUTTR
 
-This is a simple api that allows to manage tools with its name, url, description and tags.
+This is a simple api with a simple jwt authentication that allows to manage tools with its name, url, description and tags.
 
-## Login collection [/register]
+## Register collection [/register]
 
 ### Register [POST]
 
@@ -34,13 +34,13 @@ You may create your user to the application by the following parameters:
           }
         }
 
-### Login [/] 
+## Login Collection [/]
 
-### _ [POST]
+### login [POST]
 
 You may create your user to the application by the following parameters:
 
-+ email (string) - Your email
++ email  (string) - Your email
 + password (string) - Your password
 
 + Request (application/json)
