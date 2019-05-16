@@ -7,12 +7,10 @@ class ToolsController {
   }
 
   async showTag(req, res) {
-    const tools = await Tools.find({ tag: req.query.tag }, function(
+    const tools = await Tools.find({ tags: req.query.tag }, function(
       err,
       docs
-    ) {}).sort({
-      title: 1
-    });
+    ) {});
     return res.json(tools);
   }
 
