@@ -3,7 +3,6 @@ const Tools = require("../models/tools");
 class ToolsController {
   async store(req, res) {
     const tools = await Tools.create(req.body);
-    await tools.save();
     return res.json(tools);
   }
 
@@ -18,6 +17,7 @@ class ToolsController {
   }
 
   async show(req, res) {
+    const parents = await Tools.parents;
     const tools = await Tools.find({}, function(err, docs) {}).sort({
       title: 1
     });

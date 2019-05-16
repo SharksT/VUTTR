@@ -9,7 +9,7 @@ app.use(cors());
 const server = require("http").Server(app);
 
 mongoose.connect(
-  "mongodb+srv://admin:admin@cluster0-tejxt.mongodb.net/test?retryWrites=true",
+  "mongodb+srv://admin:admin@cluster0-tejxt.mongodb.net/desafio?retryWrites=true",
   {
     useNewUrlParser: true
   }
