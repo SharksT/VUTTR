@@ -4,6 +4,66 @@ FORMAT: 1A
 
 This is a simple api that allows to manage tools with its name, url, description and tags.
 
+## Login collection [/register]
+
+### Register [POST]
+
+You may create your user to the application by the following parameters:
+
++ name (string) -  Name
++ email (string) - Your email
++ password (string) - Your password
+
++ Request (application/json)
+
+        {
+            "name": "Jon Doe",
+            "email": "jondoe@example.com",
+            "password": "123456"
+        }
+
++ Response 200 (application/json)
+
+        {
+          "user": {
+            "_id": "5cdca401e914cf33ab489b5f",
+            "name": "Jon Doe",
+            "email": "jondoe@example.com",
+            "createdAt": "2019-05-15T23:42:57.489Z",
+            "__v": 0
+          }
+        }
+
+### Login [/] 
+
+### _ [POST]
+
+You may create your user to the application by the following parameters:
+
++ email (string) - Your email
++ password (string) - Your password
+
++ Request (application/json)
+
+        {
+            "email": "jondoe@example.com",
+            "password": "123456"
+        }
+
++ Response 200 (application/json)
+
+        {
+          "user": {
+            "_id": "5cdca401e914cf33ab489b5f",
+            "name": "Jon Doe",
+            "email": "jondoe@example.com",
+            "createdAt": "2019-05-15T23:42:57.489Z",
+            "__v": 0
+          },
+          "token": "(a bearer token)"
+        }
+
+
 ## Tools collection [/tools]
 
 ### List all tools [GET]
@@ -97,6 +157,7 @@ You may create describe your own tool using this action. It takes a JSON object 
 
 + Parameters
     + tag: node (required, string) - Tag of a tool as a string
+    
 ### Search using tag name [GET]
 
 + Response 200 (application/json)
@@ -131,3 +192,11 @@ You may create describe your own tool using this action. It takes a JSON object 
             ]
         }
         ]
+### Delete [/tools/{tool_id}]
+
++ Parameters
+    + tool_id: 5cdd5fdaef45484791384acc (required, string) - id of a tool
+    
+### Delete [POST]
+
++ Response 200
