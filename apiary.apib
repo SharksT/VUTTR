@@ -1,0 +1,133 @@
+FORMAT: 1A
+
+#VUTTR
+
+This is a simple api that allows to manage tools with its name, url, description and tags.
+
+## Tools collection [/tools]
+
+### List all tools [GET]
+
++ Response 200 (application/json)
+
+        [
+        {
+            _id: "5cdd610800f01547ba9e5e3a"
+            title: "Notion",
+            link: "https://notion.so",
+            description: "All in one tool to organize teams and ideas. Write, plan, collaborate, and get organized. ",
+            tags: [
+                "organization",
+                "planning",
+                "collaboration",
+                "writing",
+                "calendar"
+            ]
+        },
+        {
+            id: "5cdd610800f01547ba9e5e3b",
+            title: "json-server",
+            link: "https://github.com/typicode/json-server",
+            description: "Fake REST API based on a json schema. Useful for mocking and creating APIs for front-end devs to consume in coding challenges.",
+            tags: [
+                "api",
+                "json",
+                "schema",
+                "node",
+                "github",
+                "rest"
+            ]
+        },
+        {
+            id: "5cdd610800f01547ba9e5e3c",
+            title: "fastify",
+            link: "https://www.fastify.io/",
+            description: "Extremely fast and simple, low-overhead web framework for NodeJS. Supports HTTP2.",
+            tags: [
+                "web",
+                "framework",
+                "node",
+                "http2",
+                "https",
+                "localhost"
+            ]
+        }
+        ]
+### Describe a new tool [POST]
+
+You may create describe your own tool using this action. It takes a JSON object containing the following:
+
++ title (string) -  Title
++ description (string) - Description of the tool
++ link (string) - URI of the tool
++ tags ([string]) - tags that may represent the tool
+
++ Request (application/json)
+
+        {
+            "title": "hotel",
+            "link": "https://github.com/typicode/hotel",
+            "description": "Local app manager. Start apps within your browser, developer tool with local .localhost domain and https out of the box.",
+            "tags":["node", "organizing", "webapps", "domain", "developer", "https", "proxy"]
+        }
+
++ Response 200 (application/json)
+
+        {
+        "tags": [
+            "node",
+            "organizing",
+            "webapps",
+            "domain",
+            "developer",
+            "https",
+            "proxy"
+        ],
+        "_id": "5cdd9e03d622e84c40c5e25f",
+        "title": "hotel",
+        "link": "https://github.com/typicode/hotel",
+        "description": "Local app manager. Start apps within your browser, developer tool with local .localhost domain and https out of the box."
+        }
+
+
+
+
+
+### Tag [/tools?tag={tag}]
+
++ Parameters
+    + tag: node (required, string) - Tag of a tool as a string
+### Search using tag name [GET]
+
++ Response 200 (application/json)
+
+        [
+        {
+            id: "5cdd600bef45484791384acd",
+            title: "json-server",
+            link: "https://github.com/typicode/json-server",
+            description: "Fake REST API based on a json schema. Useful for mocking and creating APIs for front-end devs to consume in coding challenges.",
+            tags: [
+                "api",
+                "json",
+                "schema",
+                "node",
+                "github",
+                "rest"
+            ]
+        },
+        {
+            id: "5cdd610800f01547ba9e5e3a",
+            title: "fastify",
+            link: "https://www.fastify.io/",
+            description: "Extremely fast and simple, low-overhead web framework for NodeJS. Supports HTTP2.",
+            tags: [
+                "web",
+                "framework",
+                "node",
+                "http2",
+                "https",
+                "localhost"
+            ]
+        }
+        ]
