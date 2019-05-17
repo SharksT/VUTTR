@@ -19,4 +19,4 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(require("./routes"));
 
-server.listen(process.env.PORT);
+server.listen(process.env.PORT || 3000);
