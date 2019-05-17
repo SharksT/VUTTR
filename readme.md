@@ -8,11 +8,11 @@ https://vuttr4.docs.apiary.io/
 
 ## How to use
 
-To initialize the api
+To initialize and installation
 
 ```
-yarn init
-
+yarn init --yes
+yarn install
 ```
 
 To start the api in dev
