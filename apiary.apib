@@ -127,17 +127,16 @@ You may create describe your own tool using this action. It takes a JSON object 
 + tags ([string]) - tags that may represent the tool
 
 + Request (application/json)
-        
-        + Headers
+    + Headers
 
-        Authorization: Basic {token}
+            Authorization: Bearer {token}
             
-        {
-            "title": "hotel",
-            "link": "https://github.com/typicode/hotel",
-            "description": "Local app manager. Start apps within your browser, developer tool with local .localhost domain and https out of the box.",
-            "tags":["node", "organizing", "webapps", "domain", "developer", "https", "proxy"]
-        }
+{
+    "title": "hotel",
+    "link": "https://github.com/typicode/hotel",
+    "description": "Local app manager. Start apps within your browser, developer tool with local .localhost domain and https out of the box.",
+    "tags":["node", "organizing", "webapps", "domain", "developer", "https", "proxy"]
+}
 
 + Response 200 (application/json)
 
