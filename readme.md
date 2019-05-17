@@ -9,7 +9,7 @@ https://vuttr4.docs.apiary.io/
 
 ## How to use
 
-To initialize and installation
+To initialize and install
 
 ```
 yarn init --yes
