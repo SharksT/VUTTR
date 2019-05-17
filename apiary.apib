@@ -67,13 +67,13 @@ You may create your user to the application by the following parameters:
 ## Tools collection [/tools]
 
 ### List all tools [GET]
++ Request
+    + Headers
+
+            Authorization: Bearer {token}
 
 + Response 200 (application/json)
-        + Headers
 
-            Authorization: Basic {token}
-        
-        
         [
         {
             _id: "5cdd610800f01547ba9e5e3a"
@@ -127,9 +127,10 @@ You may create describe your own tool using this action. It takes a JSON object 
 + tags ([string]) - tags that may represent the tool
 
 + Request (application/json)
+        
         + Headers
 
-            Authorization: Basic {token}
+        Authorization: Basic {token}
             
         {
             "title": "hotel",
@@ -166,11 +167,12 @@ You may create describe your own tool using this action. It takes a JSON object 
     + tag: node (required, string) - Tag of a tool as a string
     
 ### Search using tag name [GET]
++ Request
+    + Headers
 
+            Authorization: Bearer {token}
+            
 + Response 200 (application/json)
-        + Headers
-
-            Authorization: Basic {token}
 
         [
         {
@@ -208,8 +210,9 @@ You may create describe your own tool using this action. It takes a JSON object 
     + tool_id: 5cdd5fdaef45484791384acc (required, string) - id of a tool
     
 ### Delete [POST]
++ Request
+    + Headers
 
+            Authorization: Bearer {token}
+            
 + Response 200
-        + Headers
-
-            Authorization: Basic {token}
