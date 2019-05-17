@@ -1,4 +1,4 @@
-const Tools = require("../models/tools");
+const Tools = require("../models/Tools");
 
 class ToolsController {
   async store(req, res) {
