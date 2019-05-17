@@ -9,6 +9,9 @@ https://vuttr4.docs.apiary.io/
 
 ## How to use
 
+### Normal mode
+
+
 To initialize and install
 
 ```bash
@@ -33,3 +36,13 @@ To test the api
 ```bash
 yarn cypress open
 ```
+### Docker mode
+
+To initialize and run
+
+```bash
+docker-compose up
+```
+
+
+
