@@ -1,6 +1,6 @@
 # VUTTR
 
-This is a simple api that allows to manage tools with its name, url, description and tags.
+This is a simple api with a simple jwt authentication that allows to manage tools with its name, url, description and tags.
 
 ## Getting started
 
