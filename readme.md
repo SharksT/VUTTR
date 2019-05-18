@@ -54,7 +54,7 @@ docker-compose up
 yarn cypress open
 ```
 
-### To CLI test mode
+### CLI test mode
 
 - Individual file
 ```bash
