@@ -23,17 +23,9 @@ class ToolsController {
   }
 
   async delete(req, res) {
-    try {
-      await Tools.findByIdAndRemove(req.params.id, (err, res2) => {
-        if (res2 === null && err === null) {
-          return res.status(400).send({ error: "Tool not found" });
-        } else {
-          return res.status(200).send();
-        }
-      });
-    } catch {
-      return res.status(400).send({ error: "Tool not found" });
-    }
+    await Tools.findByIdAndRemove(req.params.id, (err, res2) => {
+      return res.status(200).send();
+    });
   }
 }
 
