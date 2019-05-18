@@ -7,4 +7,4 @@ services:
       - "3000:3000"
     volumes:
       - .:/usr/app
-    command: yarn dev
+    command: yarn start
