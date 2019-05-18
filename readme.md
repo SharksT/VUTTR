@@ -46,5 +46,8 @@ docker pull sharkst/vuttr
 docker run -p 3000:3000 -d sharkst/vuttr
 ```
 
+Or you may download or git clone then inside the folder:
 
-
+```bash
+docker-compose up
+```
