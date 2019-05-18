@@ -32,11 +32,26 @@ yarn dev
 yarn start
 ```
 
-- To test the api
+## Test Mode
+
+- To visual test mode
 
 ```bash
 yarn cypress open
 ```
+
+- To CLI test mode
+
+Individual file
+```bash
+yarn cypress run  --spec "cypress/integration/testes/example.spec.js" 
+```
+
+All test files
+```bash
+yarn cypress run 
+```
+
 ### Docker mode
 
 To initialize and run
