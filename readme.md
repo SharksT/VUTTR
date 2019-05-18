@@ -1,4 +1,4 @@
-# VUTTR
+# VUTTR ![Travis Status](https://travis-ci.org/SharksT/VUTTR.svg?branch=master)
 
 This is a simple api with a simple jwt authentication that allows to manage tools with its name, url, description and tags.
 Demo : https://vuttrf.herokuapp.com/
@@ -9,14 +9,15 @@ https://vuttr4.docs.apiary.io/
 
 ## How to use
 
-### Normal mode
+### Manual mode
+
+You need to have [Node.js](https://nodejs.org) installed, and optionally [Yarn](https://yarnpkg.com/). If you don't have yarn change 'yarn' to 'npm' in all of the commands bellow.
 
 Download or clone and choose one of the following options:
 
 #### To initialize and install
 
 ```bash
-yarn init --yes
 yarn install
 ```
 
@@ -33,6 +34,7 @@ yarn start
 ```
 ### Docker mode
 
+You need to have [Docker](https://www.docker.com/) installed
 #### To initialize and run
 
 ```bash
