@@ -11,27 +11,28 @@ https://vuttr4.docs.apiary.io/
 
 ### Normal mode
 
+Download or clone and choose one of the following options:
 
-To initialize and install
+- To initialize and install
 
 ```bash
 yarn init --yes
 yarn install
 ```
 
-To start the api in dev
+- To start the api in dev
 
 ```bash
 yarn dev
 ```
 
-To start the api in production
+- To start the api in production
 
 ```bash
 yarn start
 ```
 
-To test the api
+- To test the api
 
 ```bash
 yarn cypress open
@@ -41,7 +42,8 @@ yarn cypress open
 To initialize and run
 
 ```bash
-docker-compose up
+docker pull sharkst/vuttr
+docker run -p 3000:3000 -d sharkst/vuttr
 ```
 
 
